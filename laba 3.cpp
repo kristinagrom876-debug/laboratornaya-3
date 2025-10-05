@@ -10,26 +10,27 @@
 using namespace std;
 
 int main() {
-  double t;
-  double h, t_cr;
-  double n=5;
+  double liftingTime;
+  double liftingHeight, averageTemperature;
+  int numOfIteration = 5;
   double index;
+  int howManyDigitsAfterTheDecimalPoint  = 2;
   
-  for (index = 0; index < n; ++index) {
-  cout << "t = ";
-  cin >> t;
+  for (index = 0; index < numOfIteration; ++index) {
+  cout << "lifting time = ";
+  cin >> liftingTime;
 
-  h = 4.87 * sqrt(t);
+  liftingHeight = 4.87 * sqrt(liftingTime);
 
-  if (h < 11) {
-      t_cr = 15.2 - 6.55 * h;
+  if (liftingHeight < 11.0) {
+      averageTemperature = 15.2 - 6.55 * liftingHeight;
   } else {
-      t_cr = -56.6 + 0.01 * h;
+      averageTemperature = -56.6 + 0.01 * liftingHeight;
   }
 
-  cout << fixed << setprecision(2);
-  cout << h << endl;
-  cout << t_cr << endl;
+  cout << fixed << setprecision(howManyDigitsAfterTheDecimalPoint);
+  cout << liftingHeight << endl;
+  cout << averageTemperature << endl;
   }
   return 0;
 }
