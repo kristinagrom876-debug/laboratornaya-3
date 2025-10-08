@@ -13,12 +13,12 @@ int main() {
   double liftingTime;
   double liftingHeight, averageTemperature;
   int numOfIteration = 5;
-  double index;
+  int index;
   int howManyDigitsAfterTheDecimalPoint  = 2;
   
-  for (index = 0; index < numOfIteration; ++index) {
-  cout << "lifting time = ";
-  cin >> liftingTime;
+  for (index = 0; index < numOfIteration; ++index) { 
+    cout << "lifting time = ";
+    cin >> liftingTime;
 
   liftingHeight = 4.87 * sqrt(liftingTime);
 
@@ -28,9 +28,9 @@ int main() {
       averageTemperature = -56.6 + 0.01 * liftingHeight;
   }
 
-  cout << fixed << setprecision(howManyDigitsAfterTheDecimalPoint);
-  cout << liftingHeight << endl;
-  cout << averageTemperature << endl;
+  cout << fixed << setprecision(howManyDigitsAfterTheDecimalPoint)<<
+          liftingHeight <<
+          averageTemperature << endl;
   }
   return 0;
 }
